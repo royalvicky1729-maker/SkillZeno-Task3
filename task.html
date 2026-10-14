@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AI Study Assistant using HTML, CSS, JavaScript and AI API">
+
+    <title>AI Study Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            🤖 AI Study Assistant
+        </div>
+
+        <button id="clearBtn" class="clear-btn">
+            Clear
+        </button>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>
+                Learn Smarter with AI
+            </h1>
+
+            <p>
+                Ask questions, summarize topics, generate quizzes,
+                and get career guidance using AI.
+            </p>
+
+        </section>
+
+
+        <!-- Mode Buttons -->
+        <div class="modes">
+
+            <button class="mode-btn active"
+                    data-mode="study">
+                📚 Study
+            </button>
+
+            <button class="mode-btn"
+                    data-mode="summarize">
+                📝 Summarize
+            </button>
+
+            <button class="mode-btn"
+                    data-mode="quiz">
+                🧠 Quiz
+            </button>
+
+            <button class="mode-btn"
+                    data-mode="career">
+                💼 Career
+            </button>
+
+        </div>
+
+
+        <!-- Input Section -->
+        <section class="input-card">
+
+            <label for="prompt">
+                Enter your question
+            </label>
+
+            <textarea
+                id="prompt"
+                rows="6"
+                maxlength="4000"
+                placeholder="Example: Explain operating system in simple language..."
+            ></textarea>
+
+            <div class="input-footer">
+
+                <span id="charCount">
+                    0 / 4000
+                </span>
+
+                <button id="askBtn"
+                        class="ask-btn">
+                    Ask AI ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>
+                AI is thinking...
+            </p>
+
+        </div>
+
+
+        <!-- Error -->
+        <div id="errorBox"
+             class="error hidden">
+        </div>
+
+
+        <!-- Response -->
+        <section id="responseCard"
+                 class="response-card hidden">
+
+            <div class="response-header">
+
+                <h2>
+                    🤖 AI Response
+                </h2>
+
+                <button id="copyBtn">
+                    📋 Copy
+                </button>
+
+            </div>
+
+            <div id="response">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            AI Study Assistant • Internship Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
